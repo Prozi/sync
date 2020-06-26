@@ -1,0 +1,26 @@
+{
+  "name": "game-flow",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "test:chat": "node ./demo/chat.js",
+    "docs": "yarn docma",
+    "lint": "yarn eslint . --fix",
+    "prettier": "prettier . --write",
+    "precommit": "yarn docs && yarn lint && yarn prettier"
+  },
+  "author": "Jacek Pietal <github.com/Prozi>",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "@jacekpietal/bouncer.js": "^2.7.1"
+  },
+  "devDependencies": {
+    "@jacekpietal/docma": "^3.2.12",
+    "eslint": "^7.3.1",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "jest": "^26.1.0"
+  }
+}
