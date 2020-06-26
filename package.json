@@ -9,12 +9,16 @@
     "docs": "yarn docma",
     "lint": "yarn eslint . --fix",
     "prettier": "prettier . --write",
+    "prepare:npm": "rm -rf node_modules && npm i && npm audit fix",
+    "prepare:yarn": "rm -rf node_modules && yarn",
+    "groom": "yarn prepare:npm && yarn prepare:yarn",
     "precommit": "yarn docs && yarn lint && yarn prettier"
   },
   "author": "Jacek Pietal <github.com/Prozi>",
   "license": "Apache-2.0",
   "dependencies": {
-    "@jacekpietal/bouncer.js": "^2.7.1"
+    "@jacekpietal/bouncer.js": "^2.7.1",
+    "rxjs": "^6.5.5"
   },
   "devDependencies": {
     "@jacekpietal/docma": "^3.2.12",
