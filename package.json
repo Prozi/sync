@@ -17,6 +17,7 @@
     "start": "node -r esm .",
     "precommit": "yarn docs && yarn lint && yarn prettier"
   },
+  "private": false,
   "author": "Jacek Pietal <github.com/Prozi>",
   "license": "CC-BY-4.0",
   "dependencies": {
