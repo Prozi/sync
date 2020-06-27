@@ -17,7 +17,7 @@
   "author": "Jacek Pietal <github.com/Prozi>",
   "license": "Apache-2.0",
   "dependencies": {
-    "@jacekpietal/bouncer.js": "^2.8.3",
+    "@jacekpietal/bouncer.js": "^2.8.6",
     "rxjs": "^6.5.5"
   },
   "devDependencies": {

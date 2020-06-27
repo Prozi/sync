@@ -288,10 +288,10 @@
   resolved "https://registry.yarnpkg.com/@istanbuljs/schema/-/schema-0.1.2.tgz#26520bf09abe4a5644cd5414e37125a8954241dd"
   integrity sha512-tsAQNx32a8CoFhjhijUIhI4kccIAgmGhy8LZMZgGfmXcpMbPRUqn5LWmgRttILi6yeGmBJd2xsPkFMs0PzgPCw==
 
-"@jacekpietal/bouncer.js@^2.8.3":
-  version "2.8.3"
-  resolved "https://registry.yarnpkg.com/@jacekpietal/bouncer.js/-/bouncer.js-2.8.3.tgz#3be5997f23162a03129f2f3e01eb888d948039d6"
-  integrity sha512-if66IbsFu3JvRjBynG2EmcsARHK3qNKatmxybofz1dMCpBoorBs6pGWDkkk3DzJmY+8H6cRjq1Cibt+E5L0DAA==
+"@jacekpietal/bouncer.js@^2.8.6":
+  version "2.8.6"
+  resolved "https://registry.yarnpkg.com/@jacekpietal/bouncer.js/-/bouncer.js-2.8.6.tgz#3b007e80dfc53eea914b4639d81829ea07d67298"
+  integrity sha512-CY+6MGtDPy6g1hXrPQTvYtXYf1t6rfoNnNnGlronaknCBqbkn+koEh7bgJ5xPRBB2yndMyLdfl2B7lItJH26ZA==
   dependencies:
     uwebsockets.js "*"
 
