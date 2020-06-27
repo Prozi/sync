@@ -1,7 +1,7 @@
 {
-  "name": "game-flow",
+  "name": "@jacekpietal/sync",
   "version": "1.0.0",
-  "description": "",
+  "description": "Boilerplate for games (multiplayer game framework) template",
   "main": "index.js",
   "sourceType": "module",
   "scripts": {
@@ -18,7 +18,7 @@
     "precommit": "yarn docs && yarn lint && yarn prettier"
   },
   "author": "Jacek Pietal <github.com/Prozi>",
-  "license": "Apache-2.0",
+  "license": "CC-BY-4.0",
   "dependencies": {
     "@jacekpietal/bouncer.js": "^2.8.6",
     "esm": "^3.2.25",
