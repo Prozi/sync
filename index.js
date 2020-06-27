@@ -1,3 +1,5 @@
 "use strict";
 
-export default require("./lib/flow.js").Flow;
+import { Flow } from "./lib/flow";
+
+export default Flow;

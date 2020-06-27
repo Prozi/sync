@@ -1,6 +1,6 @@
 "use strict";
 
-import Flow from "../";
+import Flow from "../index.js";
 
 global.document = global.document || {
   addEventListener() {},
