@@ -25,6 +25,6 @@ module.exports = {
     hot: true,
   },
   externals: {
-    "@jacekpietal/bouncer.js": __dirname + '/node_modules/bouncer.js/index.js',
+    "@jacekpietal/bouncer.js": "{}",
   },
 };
