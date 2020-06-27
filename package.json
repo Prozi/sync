@@ -7,8 +7,8 @@
     "test": "jest",
     "test:chat": "node ./demo/chat.js",
     "docs": "yarn docma",
-    "lint": "yarn eslint . --fix",
-    "prettier": "prettier . --write",
+    "lint": "yarn eslint ./lib ./docs ./*.js --fix",
+    "prettier": "prettier ./lib ./docs ./*.js --write",
     "prepare:npm": "rm -rf node_modules && npm i && npm audit fix",
     "prepare:yarn": "rm -rf node_modules && yarn",
     "groom": "yarn prepare:npm && yarn prepare:yarn",
@@ -25,6 +25,7 @@
     "eslint": "^7.3.1",
     "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-prettier": "^3.1.4",
-    "jest": "^26.1.0"
+    "jest": "^26.1.0",
+    "prettier": "^2.0.5"
   }
 }
