@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "sourceType": "module",
   "scripts": {
     "test": "jest",
     "test:chat": "node -r esm ./demo/index.js",
