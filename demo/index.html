@@ -28,7 +28,7 @@
         const { game } = window;
         const pre = document.getElementsByTagName("pre")[0];
         const state = {};
-        const address = `ws://localhost:1337`;
+        const address = `ws://${location.host}`;
         const ws = new WebSocket(address);
 
         ws.onmessage = ({ data: json }) => {
