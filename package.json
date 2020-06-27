@@ -1,9 +1,11 @@
 {
   "name": "@jacekpietal/sync",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Boilerplate for games (multiplayer game framework) template",
   "keywords": ["websockets", "websocket", "real-time", "realtime", "sockets", "socket", "networking"],
   "main": "index.js",
+  "repository": "git@github.com:Prozi/sync.git",
+  "homepage": "https://prozi.github.io/sync/",
   "sourceType": "module",
   "scripts": {
     "test": "jest",
