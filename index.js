@@ -1,3 +1,3 @@
 "use strict";
 
-module.exports = require("./lib/flow.js");
+export default require("./lib/flow.js").Flow;
