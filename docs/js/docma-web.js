@@ -8017,11 +8017,11 @@ var docma = Object.freeze(
             comment:
               "/**\n   * @param {Object} params { debug: boolean, port: number, topic: string }\n   * @property {string} topic\n   * @property {Game} game\n   * @property {BouncerJs} api\n   * @property {Later} cache\n   * @returns {class} Flow\n   */",
             meta: {
-              range: [461, 1458],
+              range: [461, 1433],
               filename: "flow.js",
               lineno: 21,
               columnno: 2,
-              path: "/home/jpietal/projects/game-flow/lib",
+              path: "/home/jpietal/projects/sync/lib",
               code: {
                 id: "astnode100000430",
                 name: "exports.Flow",
@@ -8061,7 +8061,7 @@ var docma = Object.freeze(
               filename: "game.js",
               lineno: 23,
               columnno: 2,
-              path: "/home/jpietal/projects/game-flow/lib",
+              path: "/home/jpietal/projects/sync/lib",
               code: {
                 id: "astnode100000047",
                 name: "exports.Game",
