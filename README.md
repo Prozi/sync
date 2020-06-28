@@ -1,3 +1,11 @@
+<h2 align="center">@jacekpietal/sync</h2>
+
+<p align="center">
+  <a href="https://badge.fury.io/js/%40jacekpietal%2Fsync"><img src="https://badge.fury.io/js/%40jacekpietal%2Fsync.svg" alt="shield" /></a>
+  <a href="https://circleci.com/gh/Prozi/sync"><img src="https://circleci.com/gh/Prozi/sync.svg?style=shield" alt="shield" /></a>
+  <a href="https://www.npmjs.com/package/@jacekpietal/sync"><img src="https://img.shields.io/npm/dt/@jacekpietal/sync.svg?style=flat-square" alt="downloads" /></a>
+</p>
+
 ## Introduction
 
 `@jacekpietal/sync` is:
@@ -11,6 +19,10 @@
 - a lib with a working demo.
 
 - a lib with working tests written in jest.
+
+## Installation
+
+- `npm install @jacekpietal/sync --save`
 
 ## Documentation
 
