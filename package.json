@@ -1,6 +1,6 @@
 {
   "name": "@jacekpietal/sync",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Boilerplate for games (multiplayer game framework) template",
   "keywords": ["websockets", "websocket", "real-time", "realtime", "sockets", "socket", "networking"],
   "main": "index.js",
