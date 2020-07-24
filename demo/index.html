@@ -25,27 +25,27 @@
 
       <script src="./dist.js"></script>
       <script>
-        const { game } = window;
+        const { game, UWebSocket } = window;
         const pre = document.getElementsByTagName("pre")[0];
         const state = {};
-        const address = `ws://${location.host}`;
-        const ws = new WebSocket(address);
+        const address = `ws://${location.hostname}:8080`;
+        const ws = new UWebSocket(address);
 
-        ws.onmessage = ({ data: json }) => {
-          const { id, ...data } = JSON.parse(json);
-          if (data.event === "/leave") {
-            delete state[id];
-          } else {
-            state[id] = data;
-          }
+        ws.onmessage = ({ id, data }) => {
+          state[id] = data;
           pre.innerText = JSON.stringify(state, null, 2);
         };
 
+        ws.on("/leave", ({ id, data }) => {
+          delete state.id;
+          pre.innerText = JSON.stringify(state, null, 2);
+        });
+
         ws.onopen = () => {
-          ws.send(JSON.stringify({ event: "/join", data: "echo" }));
+          ws.emitEvent("/join", "echo");
 
           game.subject$.subscribe((value) => {
-            ws.send(JSON.stringify(value));
+            ws.emit(value);
           });
         };
       </script>

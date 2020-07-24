@@ -1,6 +1,6 @@
 {
   "name": "@jacekpietal/sync",
-  "version": "1.5.2",
+  "version": "1.6.0",
   "description": "Boilerplate for apps (multiplayer framework) template",
   "keywords": [
     "websockets",
@@ -17,15 +17,14 @@
   "sourceType": "module",
   "scripts": {
     "test": "jest",
-    "test:chat": "yarn webpack && yarn node -r esm ./demo/index.js",
     "docs": "yarn docma",
     "lint": "yarn eslint ./lib ./docs ./*.js --fix",
     "prettier": "prettier ./lib ./docs ./*.js --write",
     "prepare:npm": "rm -rf node_modules && npm i && npm audit fix",
     "prepare:yarn": "rm -rf node_modules && yarn",
     "groom": "yarn prepare:npm && yarn prepare:yarn",
-    "demo": "yarn webpack && yarn start",
-    "start": "node -r esm .",
+    "start": "yarn build && node -r esm ''./lib/demo-back.js",
+    "build": "yarn webpack",
     "precommit": "yarn docs && yarn lint && yarn prettier"
   },
   "private": false,

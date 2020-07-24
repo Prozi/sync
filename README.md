@@ -21,6 +21,7 @@
 
 ```bash
 $ yarn start
+
 Start with this.config {
   LOGO: 'bouncer 🐻',
   port: 8080,
@@ -43,17 +44,25 @@ bouncer 🐻 Listens on port 8080
 
 ## Tests
 
-<a href="https://circleci.com/gh/Prozi/sync">
-  <img src="https://circleci.com/gh/Prozi/sync.svg?style=shield" alt="shield" />
-</a>
+```bash
+$ yarn test
+```
+
+- runs `jest` tests, also on `circleci`. <a href="https://circleci.com/gh/Prozi/sync"><img valign="middle" src="https://circleci.com/gh/Prozi/sync.svg?style=shield" alt="shield" /></a>
 
 | Test Suites:         | 2 passed, 2 total       |
-| -------------------- | :---------------------- |
+| :------------------- | :---------------------- |
 | Tests:               | 8 passed, 8 total       |
 | Snapshots:           | 0 total                 |
 | Time:                | 2.301 s, estimated 20 s |
 | Ran all test suites. |
 | Done in 2.83s.       |
+
+```bash
+$ yarn start
+```
+
+- compiles and runs chat example on 8080 port.
 
 ## Installation
 

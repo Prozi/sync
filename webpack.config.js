@@ -1,7 +1,7 @@
 const webpack = require("webpack");
 
 module.exports = {
-  entry: "./lib/demo.js",
+  entry: "./lib/demo-front.js",
   module: {
     rules: [
       {
