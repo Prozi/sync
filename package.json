@@ -1,7 +1,7 @@
 {
   "name": "@jacekpietal/sync",
-  "version": "1.5.1",
-  "description": "Boilerplate for games (multiplayer game framework) template",
+  "version": "1.5.2",
+  "description": "Boilerplate for apps (multiplayer framework) template",
   "keywords": [
     "websockets",
     "websocket",
@@ -17,7 +17,7 @@
   "sourceType": "module",
   "scripts": {
     "test": "jest",
-    "test:chat": "node -r esm ./demo/index.js",
+    "test:chat": "yarn webpack && yarn node -r esm ./demo/index.js",
     "docs": "yarn docma",
     "lint": "yarn eslint ./lib ./docs ./*.js --fix",
     "prettier": "prettier ./lib ./docs ./*.js --write",
@@ -32,20 +32,20 @@
   "author": "Jacek Pietal <github.com/Prozi>",
   "license": "CC-BY-4.0",
   "dependencies": {
-    "@jacekpietal/bouncer.js": "^2.11.0",
+    "@jacekpietal/bouncer.js": "^2.16.0",
     "esm": "^3.2.25",
     "latermom": "^1.0.3",
     "mime-types": "^2.1.27",
-    "rxjs": "^6.5.5"
+    "rxjs": "^6.6.0"
   },
   "devDependencies": {
-    "@babel/cli": "^7.10.4",
-    "@babel/core": "^7.10.4",
+    "@babel/cli": "^7.10.5",
+    "@babel/core": "^7.10.5",
     "@babel/preset-env": "^7.10.4",
     "@jacekpietal/docma": "^3.2.12",
     "babel-jest": "^26.1.0",
     "babel-loader": "^8.1.0",
-    "eslint": "^7.3.1",
+    "eslint": "^7.5.0",
     "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-prettier": "^3.1.4",
     "jest": "^26.1.0",
@@ -53,6 +53,6 @@
     "webpack": "^4.43.0",
     "webpack-cli": "^3.3.12",
     "webpack-dev-server": "^3.11.0",
-    "ws": "^7.3.0"
+    "ws": "^7.3.1"
   }
 }
