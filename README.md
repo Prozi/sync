@@ -38,6 +38,19 @@ bouncer 🐻 Listens on port 8080
 - with `express`-like router
 - and `socket.io`-like uWebSocket
 
+### Details
+
+- `node -r esm`
+
+```javascript
+import { Flow } from "@jacekpietal/sync";
+
+const flow = new Flow({ debug: true });
+const { game, api } = flow;
+
+console.log({ game, api });
+```
+
 ### The code should explain itself, read this test if nothing else:
 
 - [flow.spec.js](lib/flow.spec.js)

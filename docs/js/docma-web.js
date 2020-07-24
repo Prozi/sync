@@ -8126,7 +8126,7 @@ var docma = Object.freeze(
         logo: { dark: null, light: null },
         sidebar: {
           enabled: true,
-          outline: "flat",
+          outline: "tree",
           collapsed: false,
           toolbar: true,
           itemsFolded: false,
