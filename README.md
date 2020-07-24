@@ -40,7 +40,8 @@ bouncer 🐻 Listens on port 8080
 
 ### The code should explain itself, read this test if nothing else:
 
-[flow.spec.js](lib/flow.spec.js)
+- [flow.spec.js](lib/flow.spec.js)
+- `import { Flow, Game, staticServe } from "@jacekpietal/sync"`
 
 ## Tests
 

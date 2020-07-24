@@ -8023,7 +8023,7 @@ var docma = Object.freeze(
               columnno: 2,
               path: "/home/jpietal/projects/sync/lib",
               code: {
-                id: "astnode100000416",
+                id: "astnode100000432",
                 name: "exports.Flow",
                 type: "MethodDefinition",
                 paramnames: ["params"],
@@ -8063,7 +8063,7 @@ var docma = Object.freeze(
               columnno: 2,
               path: "/home/jpietal/projects/sync/lib",
               code: {
-                id: "astnode100000039",
+                id: "astnode100000055",
                 name: "exports.Game",
                 type: "MethodDefinition",
                 paramnames: ["config"],
