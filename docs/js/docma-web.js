@@ -5483,7 +5483,7 @@ var DocmaWeb = (function () {
         label,
         parts = p1.split("|");
       if (parts.length === 1) {
-        link = label = parts[0].trim(); // eslint-disable-line
+            link = label = parts[0].trim(); // eslint-disable-line
       } else {
         link = parts[0].trim();
         label = parts[1].trim();
@@ -8017,7 +8017,7 @@ var docma = Object.freeze(
             comment:
               "/**\n   * @param {Object} params { debug: boolean, port: number, topic: string }\n   * @property {string} topic\n   * @property {Game} game\n   * @property {BouncerJs} api\n   * @property {Later} cache\n   * @returns {class} Flow\n   */",
             meta: {
-              range: [444, 1203],
+              range: [444, 1252],
               filename: "flow.js",
               lineno: 19,
               columnno: 2,
