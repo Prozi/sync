@@ -1,6 +1,6 @@
 {
   "name": "@jacekpietal/sync",
-  "version": "1.8.0",
+  "version": "1.9.0",
   "description": "Boilerplate for apps (multiplayer framework) template",
   "keywords": [
     "websockets",
@@ -23,7 +23,7 @@
     "prepare:npm": "rm -rf node_modules && npm i && npm audit fix",
     "prepare:yarn": "rm -rf node_modules && yarn",
     "groom": "yarn prepare:npm && yarn prepare:yarn",
-    "start": "yarn build && node -r esm ''./lib/demo-back.js",
+    "start": "yarn build && node -r esm ./lib/demo-back.js",
     "build": "yarn webpack",
     "precommit": "yarn docs && yarn lint && yarn prettier"
   },
@@ -31,7 +31,7 @@
   "author": "Jacek Pietal <github.com/Prozi>",
   "license": "CC-BY-4.0",
   "dependencies": {
-    "@jacekpietal/bouncer.js": "^2.16.0",
+    "@jacekpietal/bouncer.js": "^2.17.2",
     "esm": "^3.2.25",
     "latermom": "^1.0.3",
     "mime-types": "^2.1.27",
@@ -41,7 +41,7 @@
     "@babel/cli": "^7.10.5",
     "@babel/core": "^7.11.0",
     "@babel/preset-env": "^7.11.0",
-    "@jacekpietal/docma": "^3.2.12",
+    "@jacekpietal/docma": "^3.2.13",
     "babel-jest": "^26.2.2",
     "babel-loader": "^8.1.0",
     "eslint": "^7.6.0",

@@ -7,31 +7,39 @@
   <a href="https://www.npmjs.com/package/@jacekpietal/sync"><img src="https://img.shields.io/npm/dt/@jacekpietal/sync.svg?style=flat-square" alt="downloads" /></a>
 </p>
 
+<br/><br/>
+
 ## Introduction
 
 `@jacekpietal/sync` is:
 
 - a boilerplate library / repository.
 - simplifier for creating multiplayer games in javascript + node.
-- a library with websockets integration (microwebsockets actually written in c++)
+- bouncer.js extended class,
+- library having static files serve function that takes folder path as argument 
+- that has served files lazy cache implemented.
+- observable mouse events broadcaster from front to backend on uwebsockets,
+- a library with microwebsockets integration,
 - a lib with a working demo.
 - a lib with working tests written in jest.
 
 ## Readme
 
 ```bash
-$ yarn start
+$ yarn start # running example script yields this output below:
+```
 
+```javascript
 Start with this.config {
-  LOGO: 'bouncer 🐻',
-  port: 8080,
+  LOGO: 'sync 🏄',
+  port: process.env.port || 8080,
   join: '/join',
   leave: '/leave',
   createSocketId: [Function: simpleId],
   plugins: { echo: [Function: bound echo] },
   debug: true
 }
-bouncer 🐻 Listens on port 8080
+sync 🏄 Listens on port 8080
 ```
 
 - this will create a chat on 8080 port
