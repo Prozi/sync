@@ -5,6 +5,7 @@
 <p align="center">
   <a href="https://badge.fury.io/js/%40jacekpietal%2Fsync"><img src="https://badge.fury.io/js/%40jacekpietal%2Fsync.svg" alt="shield" /></a>
   <a href="https://www.npmjs.com/package/@jacekpietal/sync"><img src="https://img.shields.io/npm/dt/@jacekpietal/sync.svg?style=flat-square" alt="downloads" /></a>
+  <a href="https://circleci.com/gh/Prozi/sync"><img src="https://circleci.com/gh/Prozi/sync.svg?style=shield" alt="shield" /></a>
 </p>
 
 <br/><br/>
@@ -30,13 +31,13 @@ $ yarn start # running example script yields this output below:
 ```
 
 ```javascript
-Start with this.config {
+sync 🏄 Starts with config: {
   LOGO: 'sync 🏄',
-  port: process.env.port || 8080,
+  port: 8080,
   join: '/join',
   leave: '/leave',
-  createSocketId: [Function: simpleId],
-  plugins: { echo: [Function: bound echo] },
+  plugins: { chat: [Function: chat] },
+  idConfig: { lang: 'english', len: 5 },
   debug: true
 }
 sync 🏄 Listens on port 8080
@@ -70,7 +71,7 @@ console.log({ game, api });
 $ yarn test
 ```
 
-- runs `jest` tests, also on `circleci`. <a href="https://circleci.com/gh/Prozi/sync"><img valign="middle" src="https://circleci.com/gh/Prozi/sync.svg?style=shield" alt="shield" /></a>
+- runs `jest` tests, also on `circleci`.
 
 | Test Suites:         | 2 passed, 2 total       |
 | :------------------- | :---------------------- |
