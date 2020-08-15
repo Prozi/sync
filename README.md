@@ -55,9 +55,8 @@ sync 🏄 Listens on port 8080
 import { Flow } from "@jacekpietal/sync";
 
 const flow = new Flow({ debug: true });
-const { game, api } = flow;
 
-console.log({ game, api });
+console.log(flow);
 ```
 
 ### The code should explain itself, read this test if nothing else:
