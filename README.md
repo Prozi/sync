@@ -50,7 +50,7 @@ sync 🏄 Starts with config: {
   port: 8080,
   join: '/join',
   leave: '/leave',
-  plugins: { joystick: [Function: chat] },
+  plugins: { joystick: [Function: echo] },
   idConfig: { lang: 'english', len: 5 },
   debug: true
 }
