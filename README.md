@@ -68,7 +68,7 @@ sync 🏄 Listens on port 8080
 ```javascript
 "use strict";
 
-import { Game } from "./game";
+import { Game } from "@jacekpietal/sync/game.js";
 import UWebSocket from "@jacekpietal/bouncer.js/client.js";
 
 const game = new Game();
@@ -94,7 +94,6 @@ ws.onopen = () => {
   // ws.emitEvent is like socket.io ws.emit("event", { data })
   ws.emitEvent("/join", "joystick");
 
-  // this is possible now
   // any change on the game joystick
   // will emit the joystick event to ws server
   game.subject$.subscribe(({ event, data }) => {
