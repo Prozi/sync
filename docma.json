@@ -76,7 +76,7 @@
       }
     }
   },
-  "src": ["./index.js", "./lib/game.js", "./lib/flow.js"],
+  "src": ["./game.js", "./flow.js"],
   "assets": {},
   "dest": "./docs",
   "clean": true

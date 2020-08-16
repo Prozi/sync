@@ -65,7 +65,7 @@ export default class Game {
   }
 
   /**
-   * @param {this.EVENTS} event
+   * @param {GameEvents} event
    * @param {any} data
    */
   emit(event, data) {
