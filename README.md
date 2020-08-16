@@ -12,16 +12,16 @@
 
 ## 1. What is `@jacekpietal/sync`?
 
-- a boilerplate library / repository.
-- simplifier for creating multiplayer games in javascript + node.
-- bouncer.js extended class,
+- a boilerplate library / repository
+- simplifier for creating multiplayer games in javascript + node
+- bouncer.js extended class
 - an express-like lib with router
 - a lib with static files served from a folder (config.folder)
-- files served statically are lazily cached out of the box.
-- observable mouse events broadcaster from front to backend on uwebsockets,
-- a library with microwebsockets integration,
-- a lib with a working demo.
-- a lib with working tests written in jest.
+- files served statically are lazily cached out of the box
+- observable mouse events broadcaster from front to backend on uwebsockets
+- a library with microwebsockets integration
+- a lib with a working demo
+- a lib with working tests written in jest
 
 ## 2. Usage
 
@@ -30,8 +30,8 @@
 ```javascript
 $ yarn add @jacekpietal/sync
 $ node
-const { Flow } = require("@jacekpietal/sync");
-const flow = new Flow();
+const Flow = require("@jacekpietal/sync/flow");
+const flow = new Flow({ debug: true, folder: '../' });
 ```
 
 ### Running example (multiplayer \$joystick)
@@ -68,7 +68,7 @@ sync 🏄 Listens on port 8080
 ```javascript
 "use strict";
 
-import { Game } from "@jacekpietal/sync/game.js";
+import Game from "@jacekpietal/sync/game";
 import UWebSocket from "@jacekpietal/bouncer.js/client.js";
 
 const game = new Game();
@@ -106,7 +106,6 @@ ws.onopen = () => {
 
 - [flow.spec.js](lib/flow.spec.js)
 - [game.spec.js](lib/game.spec.js)
-- `import { Flow, Game, staticServe } from "@jacekpietal/sync"`
 
 ## 3. Tests
 

@@ -2,15 +2,15 @@
 
 import BouncerJs from "@jacekpietal/bouncer.js";
 import { createEcho } from "@jacekpietal/bouncer.js/echo.js";
-import { Game } from "./game";
-import { staticServe, createCache } from "./static-serve";
+import Game from "./game";
+import { staticServe, createCache } from "./lib/static-serve";
 
 const joystick = createEcho("joystick");
 
 /**
  * Creates Flow with Game.
  */
-export class Flow extends BouncerJs {
+export default class Flow extends BouncerJs {
   /**
    * @param {Object} params { debug: boolean, port: number, topic: string }
    * @property {string} topic
@@ -58,11 +58,12 @@ export class Flow extends BouncerJs {
     });
 
     // static serve
-    const folder = params.folder || `${__dirname}/../demo`;
-
-    this.router.get("/*", (res, req) =>
-      staticServe({ folder }, res, req, cache),
-    );
+    const folder = params.folder;
+    if (folder) {
+      this.router.get("/*", (res, req) =>
+        staticServe({ folder }, res, req, cache),
+      );
+    }
   }
 
   get subject$() {

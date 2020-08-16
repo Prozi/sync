@@ -1,11 +1,10 @@
 "use strict";
 
-import { Flow } from "./flow";
-import { Game } from "./game";
 import { BehaviorSubject } from "rxjs";
-import { first } from "rxjs/operators";
+import { first } from "rxjs/operators";import Flow from "./flow";
 import BouncerJs from "@jacekpietal/bouncer.js";
-import UWebSocket from "@jacekpietal/bouncer.js/client";
+import UWebSocket from "@jacekpietal/bouncer.js/client.js";
+import Game from "./game";
 
 describe("GIVEN Flow", () => {
   let config;

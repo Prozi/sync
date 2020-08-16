@@ -1,9 +1,9 @@
 "use strict";
 
 import { BehaviorSubject } from "rxjs";
-import { JoyStick } from "./joystick";
+import { JoyStick } from "./lib/joystick.js";
 
-export const GameEvents = {
+const GameEvents = {
   CONFIGURED: "[Game] Configured",
   UPDATE: "[Game] Updated",
   BEFORE_UPDATE: "[Game] Before Update",
@@ -13,7 +13,7 @@ export const GameEvents = {
 /**
  * The meat
  */
-export class Game {
+export default class Game {
   /**
    * @param {Object} config Optional config for game
    * @property {Set} levels Set with levels
@@ -24,11 +24,12 @@ export class Game {
     this.uses = {};
     this.levels = new Set();
     this.subject$ = new BehaviorSubject({});
+    this.EVENTS = GameEvents;
 
     this.addJoyStick();
 
     this.configure(config);
-    this.emit(GameEvents.CONFIGURED, true);
+    this.emit(this.EVENTS.CONFIGURED, true);
   }
 
   /**
@@ -52,7 +53,7 @@ export class Game {
       }
     });
 
-    this.emit(GameEvents.UPDATE, config);
+    this.emit(this.EVENTS.UPDATE, config);
   }
 
   addJoyStick() {
@@ -64,12 +65,12 @@ export class Game {
   }
 
   /**
-   * @param {GameEvents} event
+   * @param {this.EVENTS} event
    * @param {any} data
    */
   emit(event, data) {
-    if (!Object.values(GameEvents).includes(event)) {
-      throw new Error("Requires GameEvents event");
+    if (!Object.values(this.EVENTS).includes(event)) {
+      throw new Error("Requires this.EVENTS event");
     }
 
     this.subject$.next({ event, data });
@@ -85,13 +86,13 @@ export class Game {
 
     Object.entries(events).forEach(([name, event]) => {
       if (this.uses[name]) {
-        this.emit(GameEvents.BEFORE_UPDATE, { [name]: this.uses[name] });
+        this.emit(this.EVENTS.BEFORE_UPDATE, { [name]: this.uses[name] });
       }
       this.uses[name] = event;
     });
 
     this.bindEvents(events);
-    this.emit(GameEvents.UPDATE, events);
+    this.emit(this.EVENTS.UPDATE, events);
   }
 
   /**
@@ -99,7 +100,7 @@ export class Game {
    */
   addLevel(level) {
     this.levels.add(level);
-    this.emit(GameEvents.UPDATE, { level, levels });
+    this.emit(this.EVENTS.UPDATE, { level, levels });
   }
 
   /**

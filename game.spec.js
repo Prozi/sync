@@ -1,7 +1,7 @@
 "use strict";
 
 import { filter, first } from "rxjs/operators";
-import { Game, GameEvents } from "./game";
+import Game from "./game";
 
 describe("GIVEN Game", () => {
   let game;
@@ -32,7 +32,7 @@ describe("GIVEN Game", () => {
       game = new Game(config);
       game.subject$.pipe(first()).subscribe(({ event }) => {
         console.log({ event });
-        expect(event).toBe(GameEvents.CONFIGURED);
+        expect(event).toBe(game.EVENTS.CONFIGURED);
         done();
       });
     });
@@ -49,16 +49,16 @@ describe("GIVEN Game", () => {
       game = new Game(config);
 
       game.subject$
-        .pipe(filter(({ event }) => event === GameEvents.BEFORE_UPDATE))
+        .pipe(filter(({ event }) => event === game.EVENTS.BEFORE_UPDATE))
         .subscribe(({ event, data }) => {
-          expect(event).toBe(GameEvents.BEFORE_UPDATE);
+          expect(event).toBe(game.EVENTS.BEFORE_UPDATE);
           expect(data).toStrictEqual({ keyboard: config.keyboard });
         });
 
       game.subject$
-        .pipe(filter(({ event }) => event === GameEvents.UPDATE))
+        .pipe(filter(({ event }) => event === game.EVENTS.UPDATE))
         .subscribe(({ event, data }) => {
-          expect(event).toBe(GameEvents.UPDATE);
+          expect(event).toBe(game.EVENTS.UPDATE);
           expect(data).toStrictEqual({ keyboard: null });
           done();
         });
