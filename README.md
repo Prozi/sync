@@ -117,7 +117,7 @@ $ yarn test
 
 | Test Suites:         | 2 passed, 2 total       |
 | :------------------- | :---------------------- |
-| Tests:               | 8 passed, 8 total       |
+| Tests:               | 10 passed, 10 total     |
 | Snapshots:           | 0 total                 |
 | Time:                | 2.301 s, estimated 20 s |
 | Ran all test suites. |
