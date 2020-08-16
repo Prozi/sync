@@ -978,10 +978,10 @@
   resolved "https://registry.yarnpkg.com/@istanbuljs/schema/-/schema-0.1.2.tgz#26520bf09abe4a5644cd5414e37125a8954241dd"
   integrity sha512-tsAQNx32a8CoFhjhijUIhI4kccIAgmGhy8LZMZgGfmXcpMbPRUqn5LWmgRttILi6yeGmBJd2xsPkFMs0PzgPCw==
 
-"@jacekpietal/bouncer.js@^2.17.6":
-  version "2.17.6"
-  resolved "https://registry.yarnpkg.com/@jacekpietal/bouncer.js/-/bouncer.js-2.17.6.tgz#bada310518bc8bdc766e9e69a356466143784f3f"
-  integrity sha512-28LSFn8Hx1hQcELE+EiKYxN9tUuvtinf3FJlai09feGhm1UW5izNYBEYJnEH5Lz5MofIsgEw4YmsIJYnPF1UAg==
+"@jacekpietal/bouncer.js@^2.18.0":
+  version "2.18.0"
+  resolved "https://registry.yarnpkg.com/@jacekpietal/bouncer.js/-/bouncer.js-2.18.0.tgz#e1cda9b10358b159736e24d27618b9e32913d42a"
+  integrity sha512-xEZSF6fobIT7r1Xi5W6+Ty3KlqEjOD1oXC08M5DIAr4NcaI/i8pSWXuVkPtUzcmKLsNbIpThfGGjmsNh3M3Ymg==
   dependencies:
     sillyname "^0.1.0"
     uWebSockets.js "github:uNetworking/uWebSockets.js#v18.4.0"

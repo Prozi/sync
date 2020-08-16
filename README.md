@@ -10,25 +10,39 @@
 
 <br/><br/>
 
-## Introduction
-
-`@jacekpietal/sync` is:
+## 1. What is `@jacekpietal/sync`?
 
 - a boilerplate library / repository.
 - simplifier for creating multiplayer games in javascript + node.
 - bouncer.js extended class,
-- library having static files serve function that takes folder path as argument 
-- that has served files lazy cache implemented.
+- an express-like lib with router
+- a lib with static files served from a folder (config.folder)
+- files served statically are lazily cached out of the box.
 - observable mouse events broadcaster from front to backend on uwebsockets,
 - a library with microwebsockets integration,
 - a lib with a working demo.
 - a lib with working tests written in jest.
 
-## Readme
+## 2. Usage
+
+### Using as a backend framework / library
+
+```javascript
+$ yarn add @jacekpietal/sync
+$ node
+const { Flow } = require("@jacekpietal/sync");
+const flow = new Flow();
+```
+
+### Running example (multiplayer \$joystick)
 
 ```bash
-$ yarn start # running example script yields this output below:
+$ yarn add @jacekpietal/sync
+$ cd node_modules
+$ yarn && yarn start
 ```
+
+### Output of any of above is:
 
 ```javascript
 sync 🏄 Starts with config: {
@@ -36,35 +50,66 @@ sync 🏄 Starts with config: {
   port: 8080,
   join: '/join',
   leave: '/leave',
-  plugins: { chat: [Function: chat] },
+  plugins: { joystick: [Function: chat] },
   idConfig: { lang: 'english', len: 5 },
   debug: true
 }
 sync 🏄 Listens on port 8080
 ```
 
-- this will create a chat on 8080 port
+- this created a `joystick` `plugin` (websocket room)
+- with `bouncer` listening on port `8080`
 - with `express`-like router
-- and `socket.io`-like uWebSocket
+- with `socket.io`-like wrapper
+- for micro-WebSocket as ws handler
 
-### Details
-
-- `node -r esm`
+### Example (multiplayer joystick preview)
 
 ```javascript
-import { Flow } from "@jacekpietal/sync";
+"use strict";
 
-const flow = new Flow({ debug: true });
+import { Game } from "./game";
+import UWebSocket from "@jacekpietal/bouncer.js/client.js";
 
-console.log(flow);
+const game = new Game();
+const pre = document.getElementsByTagName("pre")[0];
+const state = {};
+const address = `ws://${location.hostname}:8080`;
+const ws = new UWebSocket(address);
+
+ws.on("*", ({ id, event, data }) => {
+  if (event === "/leave") {
+    // cleanup
+    delete state[id];
+  } else {
+    // echo on screen
+    state[id] = { event, data };
+  }
+  // update render
+  pre.innerText = JSON.stringify(state, null, 2);
+});
+
+ws.onopen = () => {
+  // this is possible now
+  // ws.emitEvent is like socket.io ws.emit("event", { data })
+  ws.emitEvent("/join", "joystick");
+
+  // this is possible now
+  // any change on the game joystick
+  // will emit the joystick event to ws server
+  game.subject$.subscribe(({ event, data }) => {
+    ws.emitEvent(event, data);
+  });
+};
 ```
 
 ### The code should explain itself, read this test if nothing else:
 
 - [flow.spec.js](lib/flow.spec.js)
+- [game.spec.js](lib/game.spec.js)
 - `import { Flow, Game, staticServe } from "@jacekpietal/sync"`
 
-## Tests
+## 3. Tests
 
 ```bash
 $ yarn test
@@ -80,24 +125,22 @@ $ yarn test
 | Ran all test suites. |
 | Done in 2.83s.       |
 
-```bash
-$ yarn start
-```
-
-- compiles and runs chat example on 8080 port.
-
-## Installation
+## 4. Installation
 
 - `yarn add @jacekpietal/sync --save`
 
-## Documentation
+### Documentation
 
-- it is a maintained work in progress.
+- It is a maintained work in progress.
 
-- clone this repository and check out tests and demo to get the hang of it.
+- Clone this repository and check out tests and demo to get the hang of it.
 
-## License
+- Better yet, read the docs, and the `bouncer.js` docs then use as a framework.
+
+- Star if you like.
+
+## 5. License
 
 - Creative Commons Attribution 4.0 International.
 
-- just write somewhere in your app that you used this free library.
+- Just write somewhere in your app that you used this free library. It may be just a developer readme file.
