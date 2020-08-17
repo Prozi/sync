@@ -1,6 +1,6 @@
 {
   "name": "@jacekpietal/sync",
-  "version": "1.10.2",
+  "version": "1.10.3",
   "description": "Boilerplate for apps (multiplayer framework) template",
   "keywords": [
     "websockets",

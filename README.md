@@ -104,8 +104,8 @@ ws.onopen = () => {
 
 ### The code should explain itself, read this test if nothing else:
 
-- [flow.spec.js](lib/flow.spec.js)
-- [game.spec.js](lib/game.spec.js)
+- [flow.spec.js](flow.spec.js)
+- [game.spec.js](game.spec.js)
 
 ## 3. Tests
 
