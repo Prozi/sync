@@ -1,6 +1,6 @@
 {
   "name": "@jacekpietal/sync",
-  "version": "1.10.1",
+  "version": "1.10.2",
   "description": "Boilerplate for apps (multiplayer framework) template",
   "keywords": [
     "websockets",
@@ -30,7 +30,7 @@
   "author": "Jacek Pietal <github.com/Prozi>",
   "license": "CC-BY-4.0",
   "dependencies": {
-    "@jacekpietal/bouncer.js": "^2.18.0",
+    "@jacekpietal/bouncer.js": "^2.18.1",
     "esm": "^3.2.25",
     "latermom": "^1.0.3",
     "mime-types": "^2.1.27",
